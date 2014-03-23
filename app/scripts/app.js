@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('angularifficApp', [
+var app = angular.module('angularifficApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute'
-])
-  .config(function ($routeProvider) {
+]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
