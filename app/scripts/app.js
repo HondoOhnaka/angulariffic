@@ -1,11 +1,18 @@
+/* global app:true */
 'use strict';
 
 var app = angular.module('angularifficApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'xeditable'
 ]);
+
+// required by angular-xeditable
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
+});
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -16,6 +23,10 @@ app.config(function ($routeProvider) {
       .when('/weather', {
         templateUrl: 'views/weather.html',
         controller: 'WeatherCtrl'
+      })
+      .when('/todo', {
+        templateUrl: 'views/todo.html',
+        controller: 'TodoCtrl'
       })
       .otherwise({
         redirectTo: '/'

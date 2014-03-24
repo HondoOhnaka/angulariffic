@@ -1,0 +1,40 @@
+
+<div class="jumbotron">
+  <h1>ToDo</h1>
+  <p>This is a test to-do application written in AngularJS</p>
+</div>
+
+<div class="" ng-controller="TodoCtrl">
+  <tabset>
+      <tab heading="Todos">
+        <ul id="todo-list" class="list-unstyled" ng-repeat="e in todos">
+          <li>
+            <h3>
+            <div ng-hide="e.completed">
+              <input type="checkbox" ng-click="markComplete(e)">
+              <span editable-text="e.name">{{e.name}}</span>
+              <button class="btn btn-danger btn-sm" ng-click="removeItem(e)"><i class="fa fa-trash-o"></i> </button>
+            </div>
+            </h3>
+          </li>
+        </ul>
+        <br>
+        <input type="text" ng-model="newItem.name" class="input-md" placeholder="New Item Name" />
+        <button class="btn btn-success btn-md" ng-click="addItem(newItem.name)">Add Item</button>
+
+      </tab>
+      <tab heading="Completed">
+        <ul id="completed-list" class="list-unstyled" ng-repeat="x in completed">
+          <h3>
+            <li>
+              <span ng-show="x.completed">
+                <i class="fa fa-check"></i> {{x.name || 'empty'}}
+                <button class="btn btn-danger" ng-click="removeItem()"><i class="fa fa-trash-o"></i> </button>
+              </span>
+          </li>
+          </h3>
+        </ul>
+      </tab>
+    </tabset>
+</div>
+
