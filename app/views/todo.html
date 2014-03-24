@@ -11,9 +11,9 @@
           <li>
             <h3>
             <div ng-hide="e.completed">
-              <input type="checkbox" ng-click="markComplete(e)">
+              <input type="checkbox" ng-model="e.completed">
               <span editable-text="e.name">{{e.name}}</span>
-              <button class="btn btn-danger btn-sm" ng-click="removeItem(e)"><i class="fa fa-trash-o"></i> </button>
+              <button class="btn btn-danger btn-xs" ng-click="removeItem(e)"><i class="fa fa-trash-o"></i> </button>
             </div>
             </h3>
           </li>
@@ -24,12 +24,12 @@
 
       </tab>
       <tab heading="Completed">
-        <ul id="completed-list" class="list-unstyled" ng-repeat="x in completed">
+        <ul id="completed-list" class="list-unstyled" ng-repeat="x in todos">
           <h3>
             <li>
               <span ng-show="x.completed">
                 <i class="fa fa-check"></i> {{x.name || 'empty'}}
-                <button class="btn btn-danger" ng-click="removeItem()"><i class="fa fa-trash-o"></i> </button>
+                <button class="btn btn-danger btn-xs" ng-click="removeItem()"><i class="fa fa-trash-o"></i> </button>
               </span>
           </li>
           </h3>

@@ -19,8 +19,12 @@ app.controller('TodoCtrl', function ($scope) {
     $scope.item = '';
   };
   $scope.markComplete = function (item) {
-    $scope.removeItem(item);
-    $scope.completed.push(item);
+    $scope.completed.push({
+      id: item.id,
+      name: item.name,
+      completed: true
+    });
+    $scope.todos.splice(item, 1);
   };
   $scope.removeItem = function (removeItem) {
     $scope.todos.splice(removeItem, 1);

@@ -6,6 +6,7 @@ var app = angular.module('angularifficApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ui.bootstrap',
   'xeditable'
 ]);
 
