@@ -1,13 +1,17 @@
-<div class="jumbotron" ng-controller="MainCtrl">
+<div class="jumbotron" ng-controller="WeatherCtrl">
   <h1>Weather</h1>
   <p><a class="btn btn-lg btn-success" ng-click="getWeather()">Check Weather</a></p>
   <p>Current weather for {{city | uppercase}},{{state | uppercase}}</p>
   <p class="text-center">Time: {{currtime | date:'h:m:s a'}}
   <p ng-show="data">Currently: {{data.weather[0].description}} <br>
-    Temperature: {{data.main.temp}} - Humidity {{data.main.temp}}% <br>
+    Temperature: {{data.main.temp}} - Humidity {{data.main.humidity}}% <br>
     Wind: {{data.wind.speed}} mph
+    <p class="muted">{{ url }}</p>
+    <div>
+      <just-gage id="gauge" min=32 max=110 value=data.main.temp title="Temperature"></just-gage>
+    </div>
 </p>
-<p class="muted">{{ url }}</p>
+
 </div>
 
 

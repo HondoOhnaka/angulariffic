@@ -3,6 +3,9 @@
 app.controller('WeatherCtrl', function ($scope, $http) {
     $scope.city = 'boulder';
     $scope.state = 'co';
+    $scope.value = '99';
+
+    $scope.currtime = new Date().getTime();
 
     $scope.getWeather = function () {
       $scope.url = 'http://api.openweathermap.org/data/2.5/weather?q=' + $scope.city + ',' + $scope.state + '&units=imperial';
