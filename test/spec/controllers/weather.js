@@ -17,11 +17,11 @@ describe('Controller: WeatherCtrl', function() {
 
     mockBackend.expectGET(url).respond(rsp);
 
-    scope = $rootScope.$new();
+    $scope = $rootScope.$new();
 
     // Create a controller the same way AngularJS would in production
     ctrl = $controller('WeatherCtrl', {
-      $scope: scope
+      $scope: $scope
     });
   }));
 
@@ -36,7 +36,7 @@ describe('Controller: WeatherCtrl', function() {
   it('should fetch names from server on load', function() {
 
     // Initially, the request has not returned a response
-    expect(scope.names).toBeUndefined();
+    expect($scope.names).toBeUndefined();
     // Tell the fake backend to return responses to all current requests
     // that are in flight.
     //mockBackend.flush();
