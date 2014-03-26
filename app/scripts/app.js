@@ -7,7 +7,8 @@ var app = angular.module('angularifficApp', [
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
-  'xeditable'
+  'xeditable',
+  'ngJustGage'
 ]);
 
 // required by angular-xeditable
