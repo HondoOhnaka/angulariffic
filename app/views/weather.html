@@ -6,8 +6,8 @@
   <div ng-show="data">
     <p>Currently: <img ng-src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png"> {{data.weather[0].description}}
       <div>
-        <just-gage id="temp-gauge" min=32 max=110 value=data.main.temp title="Temperature (F0"></just-gage>
-        <just-gage id="humid-gauge" min=0 max=100 value=data.main.humidity title="Humidity (%)"></just-gage>
+        <just-gage id="temp-gauge" min=32 max=110 value="data.main.temp" title="Temperature (F)"></just-gage>
+        <just-gage id="humid-gauge" min=0 max=100 value="data.main.humidity" title="Humidity (%)"></just-gage>
         <just-gage id="wind-gauge" min=0 max=150 value=data.wind.speed title="Wind Speed (MPH)"></just-gage>
         <!-- Temperature: {{data.main.temp}} | Humidity {{data.main.humidity}}% | Wind: {{data.wind.speed}} mph -->
       </div>

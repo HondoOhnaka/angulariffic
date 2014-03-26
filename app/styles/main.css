@@ -91,3 +91,12 @@ body {
 span.completed {
   text-decoration: line-through;
 }
+
+/* weather app */
+/* gauges */
+
+#temp-gauge-justgage, #wind-gauge-justgage, #humid-gauge-justgage {
+  height: 180px;
+  width:  180px;
+  display:inline-block;
+}
