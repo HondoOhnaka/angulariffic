@@ -1,0 +1,48 @@
+{
+  "name": "angular-justgage",
+  "description": "JustGage directive for AngularJS",
+  "keywords": [
+    "angular",
+    "justgage"
+  ],
+  "homepage": "https://github.com/mattlaver/angular-justgage",
+  "bugs": "https://github.com/mattlaver/angular-justgage/issues",
+  "author": {
+    "name": "Matt Laver",
+    "email": "mattlaver@gmail.com",
+    "url": "https://github.com/mattlaver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattlaver/angular-justgage.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "main": [
+    "ng-justgage.js"
+  ],
+  "ignore": [
+    "demo",
+    "lib",
+    "screen.png",
+    "README.md"
+  ],
+  "dependencies": {
+    "angular": "~1.2.10",
+    "justgage-bower": "~1.0.0"
+  },
+  "devDependencies": {},
+  "_release": "d3d52c4b3b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d3d52c4b3b55a2d0427ce2d8ac005db88987de37"
+  },
+  "_source": "git@github.com:jimfmunro/angular-justgage.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:jimfmunro/angular-justgage.git",
+  "_direct": true
+}
