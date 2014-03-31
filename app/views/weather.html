@@ -2,7 +2,7 @@
   <h1>Weather</h1>
   <p><a class="btn btn-lg btn-success" ng-click="getWeather()">Check Weather</a></p>
   <p>Current weather for {{city | uppercase}},{{state | uppercase}}</p>
-  <p class="text-center">Time: {{currtime | date:'h:m:s a'}}
+  <p class="text-center">Time: {{currtime | date:'h:mm a'}}
   <div ng-show="data">
     <p>Currently: <img ng-src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png"> {{data.weather[0].description}}
       <div>

@@ -30,7 +30,22 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/todo.html',
         controller: 'TodoCtrl'
       })
+      .when('/directives', {
+        templateUrl: 'views/directives.html',
+        controller: 'DirectiveCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+
+app.directive('myJumbotron', function factory() {
+
+  var directiveDefinitionObject = {
+    restrict: 'E',
+    templateUrl: 'views/partials/_myjumbotron.html',
+    replace: true
+  };
+  return directiveDefinitionObject;
+});
