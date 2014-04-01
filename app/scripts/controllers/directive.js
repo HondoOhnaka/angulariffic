@@ -8,6 +8,11 @@ app.controller('DirectiveCtrl', function ($scope) {
       'alt': 'My Alt Text',
       'class': 'img-circle'
     },
-    'text': 'This is a bunch of text inside a jumbotron'
+    'text': 'This is a bunch of text inside a jumbotron',
+    'btn': {
+      'class': 'btn-success btn-large',
+      'url': '#',
+      'text': 'Call to Action'
+    }
   };
 });
